@@ -1,0 +1,22 @@
+ransomNote = "aa"
+magazine = "ab"
+
+
+        ransomNoteCnt = collections.Counter(ransomNote)
+        magazineCnt = collections.Counter(magazine)
+        print ransomNoteCnt
+        #Counter({'a': 2})
+        print magazineCnt
+        #Counter({'a': 1, 'b': 1})
+        print ransomNoteCnt - magazineCnt
+        #Counter({'a': 1})                  以少减多时，只保留相同键，且值想减
+        print magazineCnt - ransomNoteCnt
+        #Counter({'b': 1})                  以多减少时，相同键被删除，只保留多余键值对
+        print ransomNoteCnt + magazineCnt
+        #Counter({'a': 3, 'b': 1})          将双方的字典项相加，相应键值相加
+
+result is :
+{'f': 4, 'b': 1, 'g': 1}
+
+统计字符串中各个字符出现的次数
+而且他们还可以做加减运算
