@@ -9,14 +9,13 @@ magazine = "ab"
         print magazineCnt
         #Counter({'a': 1, 'b': 1})
         print ransomNoteCnt - magazineCnt
-        #Counter({'a': 1})                  以少减多时，只保留相同键，且值想减
+        #Counter({'a': 1})                  以少减多时，只保留相同键，且值相减，如果值小于０，则删除
         print magazineCnt - ransomNoteCnt
-        #Counter({'b': 1})                  以多减少时，相同键被删除，只保留多余键值对
+        #Counter({'b': 1})                  以多减少时，相同键相减，如果值小于０，则被删除，同时保留多余键值对
         print ransomNoteCnt + magazineCnt
         #Counter({'a': 3, 'b': 1})          将双方的字典项相加，相应键值相加
 
-result is :
-{'f': 4, 'b': 1, 'g': 1}
-
 统计字符串中各个字符出现的次数
 而且他们还可以做加减运算
+
+减法运算规则：相同键想减，如果值小于０，则从结果中删除。没有的键，可以设定其值为０
